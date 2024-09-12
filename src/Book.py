@@ -22,11 +22,11 @@ class Book:
     def is_available(self) -> bool:
         return self.__available
 
-    def get_checkout_num(self) -> None:
+    def get_checkout_num(self) -> int:
         return self.__checkout_num
 
     # Setters
-    def set_available(self, available) -> None:
+    def set_available(self, available: bool) -> None:
         self.__available = available
 
     def increment_checkout_num(self) -> None:
@@ -36,5 +36,5 @@ class Book:
     def __str__(self) -> str:
         return f"ISBN: {self.__isbn}, Title: {self.__title}, Author: {self.__author}"
 
-    def __eq__(self, other) -> int:
+    def __eq__(self, other: "Book") -> bool:
         return self.__isbn
