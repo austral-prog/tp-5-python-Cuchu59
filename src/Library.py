@@ -3,7 +3,7 @@ from src.User import User
 
 
 class Library:
-    def __init__(self):
+    def __init__(self) -> None:
         self.__books = []
         self.__users = []
         self.__checked_out_books = []
@@ -23,7 +23,7 @@ class Library:
         return self.__checked_in_books
 
     # 1.1 Add Book
-    def add_book(self, isbn, title, author) -> None:
+    def add_book(self, isbn: int, title: str, author: str) -> None:
         self.__books.append(Book(isbn,title, author))
 
 
@@ -33,7 +33,7 @@ class Library:
             print(f"ISBN: {book[0]}, Title: {book[1]}, Author: {book[2]}")
 
     # 2.1 Check out book
-    def check_out_book(self, isbn, dni, due_date) -> str:
+    def check_out_book(self, isbn: int, dni: int, due_date: str) -> str:
         feedback_text: str = ""
         has_book: bool = False
         has_user: bool = False
@@ -60,7 +60,7 @@ class Library:
         
 
     # 2.2 Check in book
-    def check_in_book(self, isbn, dni, returned_date) -> str:
+    def check_in_book(self, isbn: int, dni: int, returned_date: str) -> str:
 
         for book in self.__books:
             if book[0] == isbn and not book[3]:
