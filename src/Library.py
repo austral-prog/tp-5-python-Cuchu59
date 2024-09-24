@@ -49,7 +49,7 @@ class Library:
 
         book.set_available(False)
         book.increment_checkout_num()
-        self.__checked_out_books.append((isbn, dni, due_date))
+        self.checked_out_books.append((isbn, dni, due_date))
 
         user.increment_checkouts()
 
