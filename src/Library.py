@@ -81,6 +81,6 @@ class Library:
     def add_user(self, dni: int, name: str) -> str:
         if any(user.get_dni() == dni for user in self.users):
             return f"User with DNI {dni} already exists"
-        new_user = User(dni, name)
+        new_user = User(dni, name, 0, 0)
         self.users.append(new_user)
         return f"User {dni} added"
