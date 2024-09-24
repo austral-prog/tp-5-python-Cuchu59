@@ -41,5 +41,5 @@ class Book:
                     self.title == other.title and
                     self.author == other.author and
                     self.available == other.available and
-                    self.checkout_num == other.__checkout_num)
+                    self.checkout_num == other.checkout_num)
         return False
