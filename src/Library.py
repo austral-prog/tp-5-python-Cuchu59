@@ -26,7 +26,7 @@ class Library:
 
     # 1.1 Add Book
     def add_book(self, isbn: str, title: str, author: str) -> None:
-        new_book = Book(isbn, title, author)
+        new_book = Book(isbn, title, author, True, 0)
         self.books.append(new_book)
 
     # 1.2 List All Books
