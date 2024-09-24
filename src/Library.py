@@ -26,7 +26,7 @@ class Library:
 
     # 1.1 Add Book
     def add_book(self, isbn: str, title: str, author: str) -> None:
-        self.books.append(Book(isbn, title, author))
+        self.books.append(Book())
 
     # 1.2 List All Books
     def list_all_books(self) -> None:
@@ -80,5 +80,5 @@ class Library:
     def add_user(self, dni: int, name: str) -> str:
         if any(user.get_dni() == dni for user in self.users):
             return f"User with DNI {dni} already exists"
-        self.users.append(User(dni, name))
+        self.users.append(User())
         return f"User {dni} added"
